@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {PostsComponent} from '../../modules/posts/posts.component';
 import {SharedModule} from '../../shared/shared/shared.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -19,7 +20,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CommonModule,
     RouterModule,
     SharedModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDividerModule
   ],
   exports: [
     DashboardComponent,
