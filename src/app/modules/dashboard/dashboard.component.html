@@ -1,17 +1,40 @@
-<div>Line Charts</div>
+<div>
+  <app-widget-area [chartData]="bigChart"></app-widget-area>
+</div>
+
+<br>
 
 <mat-divider></mat-divider>
 
-<div>
-  <div>Line Charts</div>
-  <div>Line Charts</div>
-  <div>Line Charts</div>
-  <div>Line Charts</div>
+<br>
+
+<div class="card-container">
+  <mat-card>
+    <app-widget-card [data]="cardsChart" label="New users" total="12k" percentage="50"></app-widget-card>
+  </mat-card>
+
+  <mat-card>
+    <app-widget-card [data]="cardsChart" label="Users retention" total="18k" percentage="30"></app-widget-card>
+  </mat-card>
+
+  <mat-card>
+    <app-widget-card [data]="cardsChart" label="Users engagement" total="10k" percentage="10"></app-widget-card>
+  </mat-card>
+
+  <mat-card>
+    <app-widget-card [data]="cardsChart" label="Users" total="6k" percentage="10"></app-widget-card>
+  </mat-card>
 </div>
 
-<mat-divider></mat-divider>
+  <div class="pie-container">
+    <mat-card>
+      <app-widget-pie [data]="pieChart"></app-widget-pie>
+    </mat-card>
 
-<div>
-  <div>Table</div>
-  <div>Pie Charts</div>
-</div>
+    <mat-card>
+      <app-widget-pie [data]="pieChart"></app-widget-pie>
+    </mat-card>
+  </div>
+
+<br>
+<br>

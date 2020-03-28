@@ -7,6 +7,11 @@ import {PostsComponent} from '../../modules/posts/posts.component';
 import {SharedModule} from '../../shared/shared/shared.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {CardComponent} from '../../shared/widgets/card/card.component';
+import {HighchartsChartModule} from 'highcharts-angular';
+import {MatIconModule} from '@angular/material/icon';
+import {DashboardService} from '../../modules/dashboard.service';
 
 
 
@@ -14,19 +19,25 @@ import {MatDividerModule} from '@angular/material/divider';
   declarations: [
     DashboardComponent,
     DefaultComponent,
-    PostsComponent
+    PostsComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     SharedModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule,
+    HighchartsChartModule,
+    MatIconModule
   ],
   exports: [
     DashboardComponent,
     DefaultComponent,
-    PostsComponent
-  ]
+    PostsComponent,
+    CardComponent
+  ],
+  providers: [ DashboardService ]
 })
 export class DefaultModule { }
